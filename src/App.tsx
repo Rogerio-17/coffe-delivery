@@ -1,19 +1,17 @@
-import { ThemeProvider } from "styled-components"
-import { defaultTheme } from "./styles/themes/default"
-import { GlobalStyle } from "./styles/global"
+import { ThemeProvider } from "styled-components";
+import { defaultTheme } from "./styles/themes/default";
+import { GlobalStyle } from "./styles/global";
+import { Header } from "./components";
 
 function App() {
-
-
   return (
     <div>
       <ThemeProvider theme={defaultTheme}>
-        <div>oi moundo</div>
-      <GlobalStyle/>
+        <Header></Header>
+        <GlobalStyle />
       </ThemeProvider>
     </div>
-  )
-
+  );
 }
 
-export default App
+export default App;
