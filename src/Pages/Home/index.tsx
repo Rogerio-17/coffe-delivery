@@ -12,6 +12,9 @@ export function Home() {
 
             <CoffeContainer>
                 <CoffeWithDetails></CoffeWithDetails>
+                <CoffeWithDetails></CoffeWithDetails>
+                <CoffeWithDetails></CoffeWithDetails>
+                <CoffeWithDetails></CoffeWithDetails>
             </CoffeContainer>
         </AllCoffes>
     )
