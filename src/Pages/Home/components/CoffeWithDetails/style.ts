@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const AllCoffes = styled.main`
 
+
 h2 {
     margin-top: 5rem;
     margin-bottom: 4.5rem;
@@ -20,6 +21,7 @@ align-items: center;
 flex-direction: column;
 border-radius: 6px 36px ;
 
+
 img {
     width: 7.5rem;
     margin-top: -2.5rem;
@@ -36,6 +38,15 @@ p {
     padding: 0.2rem 1rem;
     text-align: center;
 }
+`
+
+export const ShopingCartContainerFooter = styled.button`
+background:  ${props => props.theme["purple-dark-800"]};
+color: ${props => props.theme.white};
+padding: 0.3rem 0.6rem;
+border-radius: 8px;
+margin-left: 0.5rem;
+
 `
 
 export const TagContainer = styled.div`
@@ -67,11 +78,11 @@ width: 100%;
 display: flex;
 align-items: center;
 justify-content: center;
+margin-top: 1.4rem;
 
 > div {
     display: flex;
     align-items: center;
-    gap: 2px;
 
     p {
         padding: 0;
@@ -82,6 +93,7 @@ justify-content: center;
 
     span {
         font-size: 0.75;
+        margin-right: 0.2rem;
     }
 }
 `

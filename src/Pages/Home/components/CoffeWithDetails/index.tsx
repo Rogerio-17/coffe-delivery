@@ -1,5 +1,7 @@
-import { ContainerCoffe, FooterCard, TagContainer } from "./style";
+import { ContainerCoffe, FooterCard, ShopingCartContainerFooter, TagContainer } from "./style";
 import  coffe1  from '../../../../assets/CoffeOne.svg';
+import { CountCoffe } from "../../../../components/CountCoffe";
+import { ShoppingCart } from "phosphor-react"
 
 
 
@@ -19,6 +21,9 @@ export function CoffeWithDetails() {
                     <span>R$</span>
                     <p>9,90</p>
                 </div>
+
+                <CountCoffe></CountCoffe>
+                <ShopingCartContainerFooter><ShoppingCart size={20} weight="fill"/></ShopingCartContainerFooter>
             </FooterCard>
         </ContainerCoffe>
         
