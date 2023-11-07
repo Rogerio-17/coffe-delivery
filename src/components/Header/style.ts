@@ -1,8 +1,18 @@
 import styled from "styled-components";
 
 export const HeaderContainer = styled.header`
+  width: 100%;
+  max-width: 1440px;
+  padding: 2rem 10rem;
   margin: 0 auto;
-  margin-top: 2rem;
+  transition: box-shadow 0.3s;
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.01);
+  background: ${props => props.theme.background};
+
+  position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
 
   display: flex;
   justify-content: space-between;
@@ -31,8 +41,11 @@ export const HeaderContainer = styled.header`
     background: ${props => props.theme["yellow-light-200"]};
     padding: 0 0.8rem;
     border-radius: 8px;
-    color: ${props => props.theme["yellow-dark-800"]};
     cursor: pointer;
+  }
+
+  a {
+    color: ${props => props.theme["yellow-dark-800"]};
   }
 `;
 

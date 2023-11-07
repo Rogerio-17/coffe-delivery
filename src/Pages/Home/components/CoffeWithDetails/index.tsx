@@ -1,31 +1,53 @@
-import { ContainerCoffe, FooterCard, ShopingCartContainerFooter, TagContainer } from "./style";
-import  coffe1  from '../../../../assets/CoffeOne.svg';
+import {
+  ContainerCoffe,
+  FooterCard,
+  ShopingCartContainerFooter,
+  TagContainer,
+} from "./style";
 import { CountCoffe } from "../../../../components/CountCoffe";
-import { ShoppingCart } from "phosphor-react"
+import { ShoppingCart } from "phosphor-react";
+import { formatMoney } from "../../../../utils/formatMoney";
 
+export interface Coffe {
+  id: number;
+  tags: string[];
+  name: string;
+  description: string;
+  photo: string;
+  price: number;
+}
 
+interface CoffeDetailsProps {
+  coffe: Coffe;
+}
 
-export function CoffeWithDetails() {
-    return(
-        <ContainerCoffe>
-            <img src={coffe1} />
-            <TagContainer>
-            <span>Tradicional</span>
-            <span>Com leite</span>
-            </TagContainer>
-            <h4>Expresso Tradicional</h4>
-            <p>O tradicional café feito com água quente e grãos moídos</p>
+export function CoffeWithDetails({ coffe }: CoffeDetailsProps) {
+    const formatPrice = formatMoney(coffe.price)
 
-            <FooterCard>
-                <div>
-                    <span>R$</span>
-                    <p>9,90</p>
-                </div>
+  return (
+    <ContainerCoffe>
+      <img src={`/coffes/${coffe.photo}`} />
 
-                <CountCoffe></CountCoffe>
-                <ShopingCartContainerFooter><ShoppingCart size={20} weight="fill"/></ShopingCartContainerFooter>
-            </FooterCard>
-        </ContainerCoffe>
-        
-    )
+      <TagContainer>
+        {coffe.tags.map((tag) => {
+          return <span>{tag}</span>;
+        })}
+      </TagContainer>
+
+      <h4>{coffe.name}</h4>
+      <p>{coffe.description}</p>
+
+      <FooterCard>
+        <div>
+          <span>R$</span>
+          <p>{formatPrice}</p>
+        </div>
+
+        <CountCoffe></CountCoffe>
+        <ShopingCartContainerFooter>
+          <ShoppingCart size={20} weight="fill" />
+        </ShopingCartContainerFooter>
+      </FooterCard>
+    </ContainerCoffe>
+  );
 }
