@@ -11,5 +11,5 @@ export const IntroDestaquesIncons = styled.span<ColorsIcons>`
     align-items: center;
     padding: 0.6rem;
     border-radius: 50%;
-    margin-top: -0.2rem;
+    width: 2.8rem;
 `

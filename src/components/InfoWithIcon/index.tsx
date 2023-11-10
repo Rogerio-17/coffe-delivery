@@ -4,7 +4,7 @@ import { ReactNode } from "react";
 
 interface InfoWithIconProps {
      cor: "yellow-dark-800" | "yellow-500" | "base-text-700" | "purple-500",
-     content: string,
+     content?: string,
      icon: ReactNode,
 }
 
