@@ -5,6 +5,7 @@ export const CheckoutContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   font-size: 1.4rem;
+  gap: 2rem;
 
   h4 {
     font-family: "Baloo 2", "sans-serif";
@@ -91,4 +92,48 @@ export const FormPayment = styled.div`
   }
 `;
 
-export const SelectedProducts = styled.div``;
+export const SelectedProductsContainer = styled.div``;
+
+export const SelectedProducts = styled.div`
+  background: ${(props) => props.theme["base-card-200"]};
+  padding: 2.5rem;
+  margin-top: 1rem;
+  border-radius: 0rem 3rem;
+  display: flex;
+  flex-direction: column;
+
+  .confirmpayment {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-radius: 6px;
+    color: ${(props) => props.theme["white"]};
+    background: ${(props) => props.theme["yellow-500"]};
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &:hover {
+      transition: 0.3s;
+      background: ${(props) => props.theme["yellow-dark-800"]};
+    }
+  }
+`;
+
+export const InformationPrices = styled.div`
+display: flex;
+justify-content: space-between;
+
+div {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  span {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+}
+`;

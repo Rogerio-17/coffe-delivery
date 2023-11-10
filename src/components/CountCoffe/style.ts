@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const CountCoffeContainer = styled.div`
-margin-left: 0.5rem;
+
 
 input {
     width: 1.5rem;

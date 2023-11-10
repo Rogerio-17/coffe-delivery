@@ -45,7 +45,7 @@ background:  ${props => props.theme["purple-dark-800"]};
 color: ${props => props.theme.white};
 padding: 0.3rem 0.6rem;
 border-radius: 8px;
-margin-left: 0.5rem;
+
 
 `
 
@@ -79,6 +79,7 @@ display: flex;
 align-items: center;
 justify-content: center;
 margin-top: 1.4rem;
+gap: 0.6rem;
 
 > div {
     display: flex;

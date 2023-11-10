@@ -4,9 +4,12 @@ import {
   FormAddress,
   FormAddressAndPayment,
   FormPayment,
+  InformationPrices,
   SelectedProducts,
+  SelectedProductsContainer,
 } from "./style";
 import { HeaderForms } from "./components/headerForms";
+import { CoffesSelecteds } from "./components/coffesSelecteds";
 
 export function Checkout() {
   return (
@@ -56,7 +59,30 @@ export function Checkout() {
         </FormPayment>
       </FormAddressAndPayment>
 
-      <SelectedProducts></SelectedProducts>
+      <SelectedProductsContainer>
+      <h4>Cafés selecionados</h4>
+      <SelectedProducts>
+        <CoffesSelecteds/>
+        <CoffesSelecteds/>
+
+        <InformationPrices>
+        <div>
+        <span>Total de intens</span>
+        <span>Frete</span>
+        <p>Total</p>
+        </div>
+
+        <div>
+        <span>R$ 19,80</span>
+        <span>R$ 3,50</span>
+        <p>R$23,30</p>
+        </div>
+        </InformationPrices>
+
+        <button className="confirmpayment">Confirma Pedido</button>
+      </SelectedProducts>
+      </SelectedProductsContainer>
+
     </CheckoutContainer>
   );
 }
