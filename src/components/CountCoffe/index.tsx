@@ -1,24 +1,17 @@
-import { useState } from "react";
 import { CountCoffeContainer } from "./style";
 
-export function CountCoffe() {
-    const [coffeQtd, setCoffeQtd] = useState(0)
+interface QuantityInputProps {
+    quantity: number,
+    onIncrise: () => void,
+    onDecrise: () => void,
+}
 
-    function some() {
-        setCoffeQtd(coffeQtd + 1)
-    }
-
-    function sub() {
-        if (coffeQtd > 0) {
-            setCoffeQtd(coffeQtd - 1)
-        }
-    }
-
+export function CountCoffe({onIncrise, onDecrise, quantity}: QuantityInputProps) {
     return (
         <CountCoffeContainer>
-        <button onClick={() => sub()}>-</button>
-        <input type="text" value={coffeQtd}/>
-        <button onClick={() => some()}>+</button>
+        <button disabled={quantity <= 1} onClick={() => onDecrise()}>-</button>
+        <input type="text" value={quantity}/>
+        <button onClick={() => onIncrise()}>+</button>
         </CountCoffeContainer>
     )
 }

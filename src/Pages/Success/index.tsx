@@ -1,7 +1,7 @@
 import { OrderDetails, OrderDetailsContainer, SuccessContainer } from "./style";
 import img from "../../assets/ilustracaoMoto.svg";
 import { InfoWithIcon } from "../../components/InfoWithIcon";
-import { CurrencyDollar, MapPin, Money, Timer } from "phosphor-react";
+import { CurrencyDollar, MapPin, Timer } from "phosphor-react";
 
 export function Success() {
   return (
