@@ -115,6 +115,15 @@ export const SelectedProducts = styled.div`
       transition: 0.3s;
       background: ${(props) => props.theme["yellow-dark-800"]};
     }
+
+    &:disabled{
+      opacity: 0.7;
+      cursor: not-allowed;
+
+      &:hover {
+        background: ${(props) => props.theme["yellow-500"]};
+      }
+    }
   }
 `;
 

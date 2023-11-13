@@ -45,6 +45,7 @@ background:  ${props => props.theme["purple-dark-800"]};
 color: ${props => props.theme.white};
 padding: 0.3rem 0.6rem;
 border-radius: 8px;
+cursor: pointer;
 
 
 `

@@ -17,6 +17,22 @@ export const HeaderContainer = styled.header`
   display: flex;
   justify-content: space-between;
 
+  span {
+    position: absolute;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: ${props => props.theme["yellow-dark-800"]};
+    color: ${props => props.theme["white"]};
+    border-radius: 50%;
+
+    margin-top: -1.25rem;
+    margin-left: 1.9rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   img{
     width: 6.5rem;
   }
@@ -24,17 +40,6 @@ export const HeaderContainer = styled.header`
   div {
     display: flex;
     gap: 0.7rem;
-  }
-
-  span {
-    background: ${props => props.theme["purple-light-200"]};
-    display: flex;
-    align-items: center;
-    padding: 0.6rem 0.5rem;
-    border-radius: 8px;
-    color: ${props => props.theme["purple-500"]};
-    font-weight: 700;
-    font-size: 1.1rem;
   }
 
   button {
@@ -49,3 +54,15 @@ export const HeaderContainer = styled.header`
   }
 `;
 
+export const Address = styled.div`
+ 
+    background: ${props => props.theme["purple-light-200"]};
+    display: flex;
+    align-items: center;
+    padding: 0.6rem 0.5rem;
+    border-radius: 8px;
+    color: ${props => props.theme["purple-500"]};
+    font-weight: 700;
+    font-size: 1.1rem;
+  
+`

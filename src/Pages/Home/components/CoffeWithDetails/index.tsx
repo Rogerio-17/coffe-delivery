@@ -17,9 +17,10 @@ export interface Coffe {
   description: string;
   photo: string;
   price: number;
+  
 }
 
-interface CoffeDetailsProps {
+export interface CoffeDetailsProps {
   coffe: Coffe;
 }
 
@@ -40,7 +41,7 @@ export function CoffeWithDetails({ coffe }: CoffeDetailsProps) {
     function handleAddToCart() {
       const coffeToAdd = {
         ...coffe,
-        quantity: 1,
+        quantity,
       }
 
       addCoffeToCart(coffeToAdd)
@@ -70,7 +71,7 @@ export function CoffeWithDetails({ coffe }: CoffeDetailsProps) {
         onDecrise={handleDecrease}
         quantity={quantity}
         ></CountCoffe>
-        <ShopingCartContainerFooter onClick={() => handleAddToCart}>
+        <ShopingCartContainerFooter onClick={() => handleAddToCart()}>
           <ShoppingCart size={20} weight="fill" />
         </ShopingCartContainerFooter>
       </FooterCard>

@@ -10,8 +10,25 @@ import {
 } from "./style";
 import { HeaderForms } from "./components/headerForms";
 import { CoffesSelecteds } from "./components/coffesSelecteds";
+import { useCart } from "../../hooks/useCart";
+import { formatMoney } from "../../utils/formatMoney";
 
 export function Checkout() {
+  const { cartItems } = useCart()
+  const freight = 9.0
+  const freightFormated = formatMoney(freight)
+
+  const prices = cartItems.map((item) => {
+    const priceTotal = item.price * item.quantity
+    return priceTotal
+  })
+
+  const totalPrices = prices.reduce((a, b) => a + b, 0)
+  const totalPricesOfTheOrder = totalPrices ? formatMoney(totalPrices + freight) : "0,00"
+  const totalPriceCoffes = formatMoney(totalPrices)
+
+  const isHabilityButton = cartItems.length === 0
+
   return (
     <CheckoutContainer>
       <FormAddressAndPayment>
@@ -62,24 +79,29 @@ export function Checkout() {
       <SelectedProductsContainer>
       <h4>Cafés selecionados</h4>
       <SelectedProducts>
-        <CoffesSelecteds/>
-        <CoffesSelecteds/>
+        {
+          cartItems.map((coffe) => {
+            return(
+              <CoffesSelecteds coffe={coffe}></CoffesSelecteds>
+            )
+          })
+        }
 
         <InformationPrices>
         <div>
-        <span>Total de intens</span>
+        <span>Total de itens</span>
         <span>Frete</span>
         <p>Total</p>
         </div>
 
         <div>
-        <span>R$ 19,80</span>
-        <span>R$ 3,50</span>
-        <p>R$23,30</p>
+        <span>R$ {totalPriceCoffes}</span>
+        <span>R$ {totalPrices ? freightFormated : "0,00"}</span>
+        <p>R$ {totalPricesOfTheOrder}</p>
         </div>
         </InformationPrices>
 
-        <button className="confirmpayment">Confirma Pedido</button>
+        <button disabled={isHabilityButton} className="confirmpayment">Confirma Pedido</button>
       </SelectedProducts>
       </SelectedProductsContainer>
 
