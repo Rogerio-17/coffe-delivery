@@ -1,6 +1,5 @@
 import { MapPin, ShoppingCart } from "phosphor-react";
 import { Address, HeaderContainer } from "../../components/Header/style"
-import Logo from "../../assets/Logo.svg";
 import { NavLink } from "react-router-dom";
 import { useCart } from "../../hooks/useCart";
 
@@ -9,7 +8,7 @@ export function Header() {
   return (
     <HeaderContainer>
       <NavLink to='/' title="Voltar para página inicial">
-      <img src={Logo} />
+      <img src="/ilustrator/Logo.svg" />
       </NavLink>
       <div>
         <Address>

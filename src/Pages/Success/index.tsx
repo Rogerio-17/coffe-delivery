@@ -1,5 +1,4 @@
 import { OrderDetails, OrderDetailsContainer, SuccessContainer } from "./style";
-import img from "../../assets/ilustracaoMoto.svg";
 import { InfoWithIcon } from "../../components/InfoWithIcon";
 import { CurrencyDollar, MapPin, Timer } from "phosphor-react";
 
@@ -46,7 +45,7 @@ export function Success() {
         </OrderDetails>
       </OrderDetailsContainer>
 
-      <img src={img} alt="Um cara de moto com uma caixa atrás" />
+      <img src="/ilustrator/ilustracaoMoto.svg" alt="Um cara de moto com uma caixa atrás" />
     </SuccessContainer>
   );
 }

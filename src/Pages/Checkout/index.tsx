@@ -12,6 +12,7 @@ import { HeaderForms } from "./components/headerForms";
 import { CoffesSelecteds } from "./components/coffesSelecteds";
 import { useCart } from "../../hooks/useCart";
 import { formatMoney } from "../../utils/formatMoney";
+import { AddressForm } from "./components/addresForm";
 
 export function Checkout() {
   const { cartItems } = useCart()
@@ -41,24 +42,7 @@ export function Checkout() {
             title="Endereço de Entrega"
             description="Informe o endereço onde deseja receber seu pedido"
             />
-          <form action="">
-            <div className="n1">
-              <input type="number" placeholder="CEP" />
-            </div>
-
-            <input type="text" placeholder="Rua" />
-
-            <div className="n2">
-              <input type="number" placeholder="Número" />
-              <input type="text" placeholder="Complemento" />
-            </div>
-
-            <div className="n3">
-              <input type="text" placeholder="Bairro" />
-              <input type="text" placeholder="Cidade" />
-              <input type="text" placeholder="UF" />
-            </div>
-          </form>
+            <AddressForm/>
         </FormAddress>
 
         <FormPayment>
