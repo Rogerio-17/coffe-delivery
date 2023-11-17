@@ -43,7 +43,7 @@ export function CartContextProvider({ children }: CartContextProviderProps) {
     );
 
     const newCart = produce(cartItems, (draft) => {
-      if (coffeAlreadyExistesInCart <= 0) {
+      if (coffeAlreadyExistesInCart < 0) {
         draft.push(coffe);
       } else {
         draft[coffeAlreadyExistesInCart].quantity += coffe.quantity;

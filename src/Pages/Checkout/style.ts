@@ -5,6 +5,11 @@ export const CheckoutContainer = styled.form`
   display: flex;
   justify-content: space-between;
   gap: 2rem;
+
+  h2 {
+    font-family: "Baloo 2", "sans-serif";
+    color: ${(props) => props.theme["base-title-900"]};
+  }
 `;
 
 export const SectionBaseStyle = styled.div`
