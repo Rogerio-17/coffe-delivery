@@ -1,17 +1,26 @@
-import { PaymentMethodContainer } from "./stely";
-import { ReactNode } from "react";
+import { PaymentMethodContainer, ContentContainer } from "./stely";
+import { InputHTMLAttributes, ReactNode, forwardRef } from "react";
 
-interface PaymentMethodInputProps {
-    icon: ReactNode,
-    content: string
-}
+type PaymentMethodInputProps = InputHTMLAttributes<HTMLInputElement> & {
+  icon: ReactNode;
+  label: string;
+};
 
 
-export function PaymentMethodInput({icon, content}: PaymentMethodInputProps) {
-    return(
+export const PaymentMethodInput = forwardRef<
+  HTMLInputElement,
+  PaymentMethodInputProps
+>(({ id, icon, label, ...props }, ref) =>{
+    return (
         <PaymentMethodContainer>
-          {icon}
-          {content}
+          <input id={id} type="radio" {...props} name="PaymentMethod" ref={ref}/>
+    
+          <label htmlFor={id}>
+            <ContentContainer>
+              {icon}
+              {label}
+            </ContentContainer>
+          </label>
         </PaymentMethodContainer>
-    )
-}
+      );
+})
