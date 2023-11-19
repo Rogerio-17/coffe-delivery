@@ -21,4 +21,17 @@ body, input, textarea, button {
     font-size: 1rem;
 }
 
+ ::-webkit-scrollbar {
+    width: 0.4rem;
+}
+
+::-webkit-scrollbar-track {
+    background: ${({theme}) => theme['base-button-400']};
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 2rem;
+    background: ${({theme}) => theme['purple-500']};
+}
+
 `

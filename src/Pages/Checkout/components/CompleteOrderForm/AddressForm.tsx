@@ -22,6 +22,7 @@ export function AddressForm() {
         type="number"
         className="cep"
         {...register("cep")}
+        min={0}
         error={errors.cep?.message}
       />
       <Input
@@ -35,6 +36,7 @@ export function AddressForm() {
         type="number"
         {...register("numero")}
         error={errors.numero?.message}
+        min={0}
       />
       <Input
         placeholder="Complemento"

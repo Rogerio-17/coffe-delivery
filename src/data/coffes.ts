@@ -37,7 +37,7 @@ export const coffees = [
       name: "Café com Leite",
       description: "Meio a meio de expresso tradicional com leite vaporizado",
       photo: "leite.png",
-      price: 23.9,
+      price: 5.9,
     },
     {
       id: 6,
@@ -46,7 +46,7 @@ export const coffees = [
       description:
         "Uma dose de café expresso com o dobro de leite e espuma cremosa",
       photo: "latte.png",
-      price: 199.9,
+      price: 11.9,
     },
     {
       id: 7,
@@ -55,7 +55,7 @@ export const coffees = [
       description:
         "Bebida com canela feita de doses iguais de café, leite e espuma",
       photo: "capuccino.png",
-      price: 39.9,
+      price: 16.9,
     },
     {
       id: 8,
@@ -80,7 +80,7 @@ export const coffees = [
       name: "Chocolate Quente",
       description: "Bebida feita com chocolate dissolvido no leite quente e café",
       photo: "chocolate.png",
-      price: 9.9,
+      price: 4.9,
     },
     {
       id: 11,
@@ -89,7 +89,7 @@ export const coffees = [
       description:
         "Drink gelado de café expresso com rum, creme de leite e hortelã",
       photo: "cubano.png",
-      price: 9.9,
+      price: 5.55,
     },
     {
       id: 12,
@@ -97,7 +97,7 @@ export const coffees = [
       name: "Havaiano",
       description: "Bebida adocicada preparada com café e leite de coco",
       photo: "havaiano.png",
-      price: 9.9,
+      price: 13.77,
     },
     {
       id: 13,
@@ -105,7 +105,7 @@ export const coffees = [
       name: "Árabe",
       description: "Bebida preparada com grãos de café árabe e especiarias",
       photo: "arabe.png",
-      price: 9.9,
+      price: 8.5,
     },
     {
       id: 14,
@@ -113,6 +113,6 @@ export const coffees = [
       name: "Irlandês",
       description: "Bebida a base de café, uísque irlandês, açúcar e chantilly",
       photo: "irlandes.png",
-      price: 9.9,
+      price: 7.0,
     },
   ];
