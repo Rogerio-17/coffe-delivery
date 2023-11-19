@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const SuccessContainer = styled.main`
-  margin-top: 10rem;
+  margin-top: 2rem;
   display: flex;
   gap: 10rem;
 `;

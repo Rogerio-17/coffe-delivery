@@ -1,8 +1,24 @@
 import { OrderDetails, OrderDetailsContainer, SuccessContainer } from "./style";
 import { InfoWithIcon } from "../../components/InfoWithIcon";
 import { CurrencyDollar, MapPin, Timer } from "phosphor-react";
+import { useLocation, useNavigate } from "react-router-dom";
+import { ConfirmOrderFormData } from "../Checkout";
+import { paymentMethods } from "../Checkout/components/CompleteOrderForm/PaymentMethodoOptions";
+import { useEffect } from "react"
 
 export function Success() {
+  const {state} = useLocation()
+  const address:ConfirmOrderFormData = state
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    if(!address){
+      navigate("/")
+    }
+  }, []);
+
+  if(!address) return <></>
+  
   return (
     <SuccessContainer>
       <OrderDetailsContainer>
@@ -15,8 +31,8 @@ export function Success() {
               icon={<MapPin size={26} weight="fill" />}
             />
             <div>
-              <p>Entrega em <span>Rua João Daniel Martinelli, 102</span></p>
-              <p>Farrapos - Porto Alegre, RS</p>
+              <p>Entrega em <span>{address.rua}, {address.numero}</span></p>
+              <p>{address.bairro} - {address.cidade}, {address.uf}</p>
             </div>
           </div>
 
@@ -38,7 +54,7 @@ export function Success() {
             />
             <div>
               <p>Pagamento na entrega</p>
-              <span>Cartão de Crédito</span>
+              <span>{paymentMethods[address.paymentMethod].label}</span>
             </div>
           </div>
 

@@ -1,6 +1,6 @@
 import { IntroContainer, IntroDestaques, IntroInformacoesDoServico } from "./style"
 import { Coffee, Package, ShoppingCart, Timer } from "phosphor-react"
-import { InfoWithIcon } from "../InfoWithIcon"
+import { InfoWithIcon } from "../../../../components/InfoWithIcon"
 
 
 export function Intro() {

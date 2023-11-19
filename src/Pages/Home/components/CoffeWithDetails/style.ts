@@ -20,6 +20,7 @@ display: flex;
 align-items: center;
 flex-direction: column;
 border-radius: 6px 36px ;
+margin-bottom: 2rem;
 
 
 img {

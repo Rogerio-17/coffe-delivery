@@ -4,7 +4,7 @@ export const IntroContainer = styled.div`
   width: 100%;
   display: flex;
   grid-template-columns: 1fr 1fr;
-  margin-top: 8rem;
+  margin-top: 4rem;
   gap: 5rem;
 `;
 

@@ -3,7 +3,8 @@ import { PaymentMethodInput } from "../PaymentMethodInput";
 import { PaymentMethodOptionsContainer } from "./style";
 import { useFormContext } from "react-hook-form";
 
-export const paymentMethod = {
+
+export const paymentMethods = {
   credit: {
     label: "Cartão de Crédito",
     icon: <CreditCard size={16} />,
@@ -21,10 +22,16 @@ export const paymentMethod = {
 };
 
 export function PaymentMethodOptions() {
-    const { register } = useFormContext()
+    const { register, formState: {errors} } = useFormContext()
+
+    console.log(errors)
+
+    const paymentMethodError = errors?.paymentMethod?.message as unknown as string
+
   return (
     <PaymentMethodOptionsContainer>
-      {Object.entries(paymentMethod).map(([key, { label, icon }]) => (
+      {Object.entries(paymentMethods).map(([key, { label, icon }]) => (
+        
         <PaymentMethodInput
           key={label}
           id={key}
@@ -34,6 +41,7 @@ export function PaymentMethodOptions() {
           {...register("paymentMethod")}
         />
       ))}
+      {paymentMethodError && <p>{paymentMethodError}</p>}
     </PaymentMethodOptionsContainer>
   );
 }
