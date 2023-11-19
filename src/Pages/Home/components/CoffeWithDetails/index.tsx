@@ -9,6 +9,8 @@ import { ShoppingCart } from "phosphor-react";
 import { formatMoney } from "../../../../utils/formatMoney";
 import { useCart } from "../../../../hooks/useCart";
 import { useState } from "react";
+import "react-toastify/dist/ReactToastify.css";
+import { toastifySuccess } from "../../../../components/ToastifySettings";
 
 export interface Coffe {
   id: number;
@@ -43,8 +45,8 @@ export function CoffeWithDetails({ coffe }: CoffeDetailsProps) {
         ...coffe,
         quantity,
       }
-
       addCoffeToCart(coffeToAdd)
+      toastifySuccess("Item adicionado no carrinho", "success")
     }
 
   return (

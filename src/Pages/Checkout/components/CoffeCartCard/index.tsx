@@ -3,6 +3,7 @@ import { CountCoffe } from "../../../../components/CountCoffe";
 import { ActionsContainer, CoffeCartCardConatiner, RemoveBotton } from "./style";
 import { formatMoney } from "../../../../utils/formatMoney";
 import { useCart } from "../../../../hooks/useCart";
+import { toastifySuccess } from "../../../../components/ToastifySettings";
 
 export interface Coffe {
     id: number;
@@ -26,6 +27,7 @@ export function CoffeCartCard({coffe}: CoffeCardProps){
 
     function handleRemoveCartItem() {
         removeCartItem(coffe.id)
+        toastifySuccess("Item removido do carrinho!", "info")
     }
 
     function handleOnIncrise() {
