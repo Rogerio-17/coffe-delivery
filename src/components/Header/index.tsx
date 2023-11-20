@@ -16,7 +16,7 @@ export function Header() {
         </Address>
         <button >
           <span>{quantityCart}</span>
-          <NavLink to='/checkout' title="Ir para o carrinho">
+          <NavLink to='/cart' title="Ir para o carrinho">
           <ShoppingCart size={32} weight="fill"/>
           </NavLink>
         </button>
