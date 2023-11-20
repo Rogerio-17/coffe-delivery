@@ -49,7 +49,6 @@ export const HeaderContainer = styled.header`
 `;
 
 export const Address = styled.div`
- 
     background: ${props => props.theme["purple-light-200"]};
     display: flex;
     align-items: center;
@@ -57,6 +56,6 @@ export const Address = styled.div`
     border-radius: 8px;
     color: ${props => props.theme["purple-500"]};
     font-weight: 700;
-    font-size: 1.1rem;
+    font-size: 1rem;
   
 `

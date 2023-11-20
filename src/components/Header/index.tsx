@@ -12,7 +12,7 @@ export function Header() {
       </NavLink>
       <div>
         <Address>
-          <MapPin size={32} weight="fill"/> Porto Alegre, RS
+          <MapPin size={24} weight="fill"/> Porto Alegre, RS
         </Address>
         <button >
           <span>{quantityCart}</span>
